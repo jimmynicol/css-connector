@@ -1,0 +1,31 @@
+{
+  "name": "css-connector",
+  "version": "1.0.0",
+  "description": "Set of build tool connectors for CSS modules delivered via NPM",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "keywords": [
+    "CSS",
+    "build",
+    "tools",
+    "NPM",
+    "Gulp",
+    "Grunt"
+  ],
+  "author": "Jimmy Nicol",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "gulp": "^3.8.8",
+    "gulp-jshint": "^1.8.4",
+    "gulp-mocha": "^1.1.0",
+    "gulp-util": "^3.0.1"
+  },
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "event-stream": "^3.1.7",
+    "vinyl": "^0.4.3"
+  }
+}
