@@ -18,6 +18,7 @@
   "license": "ISC",
   "devDependencies": {
     "chai": "^1.9.1",
+    "grunt": "^0.4.5",
     "gulp": "^3.8.8",
     "gulp-jshint": "^1.8.4",
     "gulp-mocha": "^1.1.0",
@@ -26,6 +27,7 @@
   "dependencies": {
     "chalk": "^0.5.1",
     "event-stream": "^3.1.7",
+    "inflection": "^1.4.2",
     "vinyl": "^0.4.3"
   }
 }

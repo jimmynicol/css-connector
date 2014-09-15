@@ -1,32 +1,21 @@
 'use strict';
 
-var atomicity = require('../');
+var cssModule = require('./css_module');
+
 
 module.exports = function(grunt){
 
   grunt.initConfig({
-    atomicity: {
+    cssModule: {
       dev: {
-        options: {
-          minify: false,
-          autoprefixer: true,
-          variables: './css/test_variables.scss',
-        },
-        dest: __dirname + '/' + atomicity.file
-      },
-      dist: {
-        options: {
-          minify: true,
-          autoprefixer: true,
-          variables: './css/test_variables.scss',
-        },
-        dest: __dirname + '/' + atomicity.fileMin
+        options: { silent: false },
+        dest: __dirname + '/cssModule.css'
       }
     }
   });
 
-  // register the atomicity task
-  atomicity.grunt(grunt);
+  // register the cssModule task
+  cssModule.grunt(grunt);
 
-  grunt.registerTask('css', ['atomicity']);
+  grunt.registerTask('css', ['cssModule']);
 };

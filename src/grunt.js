@@ -1,13 +1,14 @@
 'use strict';
 
 var fs     = require('fs'),
-    chalk  = require('chalk');
+    chalk  = require('chalk'),
+    inflec = require('inflection');
 
 
 module.exports = function(render, file){
 
-  function GruntConnector(grunt){
-    var options, desc, css;
+  return function(grunt){
+    var options, desc, css, taskName;
 
     desc = 'Render ' + file + ' with options';
 
@@ -17,7 +18,13 @@ module.exports = function(render, file){
       }
     }
 
-    grunt.registerMultiTask('atomicity', desc, function(){
+    try {
+      taskName = inflec.camelize(file.split('.')[0].replace('-','_'), true);
+    } catch(e) {
+      taskName = 'cssConnect';
+    }
+
+    grunt.registerMultiTask(taskName, desc, function(){
       // set a default of not making the rendering silent
       options = this.options({ silent: false });
 
@@ -30,7 +37,5 @@ module.exports = function(render, file){
     });
 
   };
-
-  return GruntConnector;
 
 };
