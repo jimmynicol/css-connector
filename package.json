@@ -1,7 +1,12 @@
 {
   "name": "css-connector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Set of build tool connectors for CSS modules delivered via NPM",
+  "homepage": "https://github.com/jimmynicol/css-connector",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jimmynicol/css-connector.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
